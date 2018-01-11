@@ -1,5 +1,26 @@
 // Event: Strikethrough text when clicking on clean list item
-$('li').on('click', function() { 
-	
-	$(this).css("text-decoration", "line-through");
+$('ul').on('click', 'li', function() { 
+	$(this).toggleClass("completed");
+});
+
+// Event: Remove list item
+$('ul').on('click', 'span', function(e){
+	$(this).parent().fadeOut(500, function(){
+		$(this).remove();
+	});
+	e.stopPropagation();
+});
+
+// Event: Add a new list item
+$("input[type='text']").keypress(function(e){
+	if (e.which === 13) {
+		// get text from input
+		var text = $(this).val();
+
+		// add text to ul list
+		$('ul').append("<li><span>X</span> " + text + "</li>");
+
+		// Empty the input field
+		$(this).val("");
+	}
 });

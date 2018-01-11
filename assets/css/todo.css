@@ -5,20 +5,48 @@ html {
 
 body {
 	font-family: 'Barlow', sans-serif;
+	font-size: 1.15rem;
+}
+
+h1 {
+	font-size: 1.5rem;
+	background: #f2e185;
+	padding: 10px 20px;
+	color: #3d2301;
+	text-transform: uppercase;
+	font-weight: normal;
 }
 
 input {
-	width: 100%;
+	width: 280px;
 	border: none;
-	padding: none;
+	padding: 5px 10px;
+	font-family: 'Barlow', sans-serif;
+}
+
+ul {
+	padding: 5px 10px;
+	margin: 0px;
+	list-style: none;
+}
+
+li:nth-child(2n) {
+	background: white;
+}
+
+.completed {
+	text-decoration: line-through;
+	color: gray;
 }
 
 #container {
 	margin: 20px auto;
-	text-align: center;
+	text-align: left;
 	background: #f9f9e8;
 	width: 300px;
-	padding: 0px;
+	/*padding: 10px;*/
+	border: none;
+	box-shadow: 0px 5px 20px #664387;
 }
 
 ul {
