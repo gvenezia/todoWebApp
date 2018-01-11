@@ -1,16 +1,16 @@
 html {
 	height: 100%;
-	background: -webkit-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
-	background: -moz-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
-	background: -ms-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
-	background: -o-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
-	background: linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
 }
 
 body {
 	font-family: 'Barlow', sans-serif;
 	font-size: 1.15rem;
 	color: #562300;
+	background: -webkit-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
+	background: -moz-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
+	background: -ms-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
+	background: -o-linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
+	background: linear-gradient(165deg, #4c6182, #91609b, #722e75, #4b064c);
 }
 
 h1 {
@@ -42,6 +42,11 @@ input:focus {
 	outline: none !important;
 }
 
+input::placeholder {
+  color: #d1a5a5;
+  font-size: 1em;
+}
+
 ul {
 	padding: 0px 0px;
 	margin: 0px 0px;
@@ -51,37 +56,56 @@ ul {
 }
 
 li {
-	height: 40px;
 	width: 100%;
 	line-height: 40px;
-	padding: 0px 10px;
+	padding-left: 10px;
 	box-sizing: border-box;
+}
+
+li:hover span {
+	width: 40px;
+	display: inline;
+	opacity: 1;
+	font-size: inherit;
 }
 
 li:nth-child(2n) {
 	background: white;
 }
 
-/* Classes */
+span {
+	float: right;
+	line-height: 40px;
+	background: #c40000;
+	color: #f7c5c5;
+	opacity: 0;
+	display: inline-block;
+	width: 0;
+	height: 40px;
+	font-size: 10px;
+	width: 3px;
+	text-align: center;
+	transition: .2s linear;
+}
 
+span:hover {
+	cursor: pointer;
+}
+
+
+/* Classes */
 .completed {
 	text-decoration: line-through;
 	color: gray;
 }
 
 /* Font Awesome Classes*/
-
-.fas:hover {
+.fas {
 	cursor: pointer;
 }
 
 .fa-plus {
 	float: right;
-}
-
-.fa-trash-alt {
-	float: right;
-	line-height: 40px;
 }
 
 /* Id's */
@@ -90,7 +114,6 @@ li:nth-child(2n) {
 	text-align: left;
 	background: #f9f9e8;
 	width: 300px;
-	/*padding: 10px;*/
 	border: none;
 	box-shadow: 0px 5px 20px #664387;
 }

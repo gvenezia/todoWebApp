@@ -18,13 +18,13 @@ $("input[type='text']").keypress(function(e){
 		var text = $(this).val();
 
 		// add text to ul list
-		$('ul').append("<li>" + text + "<span class='fas fa-trash-alt'></li>");
+		$('ul').append("<li>" + text + "<span><i class='fas fa-trash-alt'></i></span></li>");
 
 		// Empty the input field
 		$(this).val("");
 	}
 });
 
-// for (var i = 0; i < $('li').val(); i++) {
-// 	if ()
-// }
+$('.fa-plus').click(function(){
+	$("input[type='text']").fadeToggle();
+});
