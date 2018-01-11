@@ -18,9 +18,13 @@ $("input[type='text']").keypress(function(e){
 		var text = $(this).val();
 
 		// add text to ul list
-		$('ul').append("<li><span>X</span> " + text + "</li>");
+		$('ul').append("<li>" + text + "<span class='fas fa-trash-alt'></li>");
 
 		// Empty the input field
 		$(this).val("");
 	}
 });
+
+// for (var i = 0; i < $('li').val(); i++) {
+// 	if ()
+// }
